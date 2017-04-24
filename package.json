@@ -5,15 +5,23 @@
   "main": "index.js",
   "dependencies": {
     "nodejs": "^0.0.0",
-    "node-static": "0.7.9",
-    "webpack": "2.4.1"
+    "node-static": "^0.7.9",
+    "webpack": "^2.4.1",
+    "webpack-cli": "1.0.0",
+    "webpack-dev-server": "2.4.4",
+    "glob": "7.1.1",
+    "server-js": "0.1.4",
+    "serve-favicon": "2.4.2",
+    "font-awesome": "4.7.0"
   },
   "devDependencies": {
     "jquery": "3.2.1",
-    "angular": "1.6.4"
+    "angular": "1.6.4",
+    "angular-resource": "1.6.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --progress --colors & webpack-dev-server --content-base ./public --hot"
   },
   "repository": {
     "type": "git",
