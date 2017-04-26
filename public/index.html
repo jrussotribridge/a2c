@@ -10,6 +10,7 @@
                 color: brown;
                 font-size: 48px;
                 padding: 0 0 0 20px;
+                display: inline-block;
             }
         </style>
         <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
@@ -18,8 +19,14 @@
         <div>
             <div class="header">
                 <div class="header-logo">
-                    flickerchat.org
+                    <div>
+                        <i class="fa fa-rss" aria-hidden="true"></i> 
+                    </div>
+                    <div>
+                         flickerchat.org
+                    </div>
                 </div>
+            </div>
         </div>
         
         <!--BEGIN:: comment out these references when deploying to prod-->
@@ -29,8 +36,6 @@
         <script src="./public/app/controllers/chatController.js"></script>
         <!--END:: comment out these references when deploying to prod-->
 
-        <!--BEGIN:: uncomment this section when moving to prod-->
-        <!--<script src="./public/bundles/app.bundle.js"> </script>-->
-        <!--END:: uncomment this section when moving to prod-->
+        <script src="./public/bundles/app.bundle.js"> </script>
     </body>
 </html>

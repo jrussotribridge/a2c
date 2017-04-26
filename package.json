@@ -12,7 +12,10 @@
     "glob": "7.1.1",
     "server-js": "0.1.4",
     "serve-favicon": "2.4.2",
-    "font-awesome": "4.7.0"
+    "font-awesome": "4.7.0",
+    "style-loader": "0.16.1",
+    "css-loader": "0.28.0",
+    "file-loader": "0.11.1"
   },
   "devDependencies": {
     "jquery": "3.2.1",
