@@ -1,4 +1,5 @@
 var app = require('http');
+var url = require('url');
 var fs = require('fs');
 var index = './public/index.html';
 var port = 8090;
@@ -6,13 +7,18 @@ var path = require('path');
 var favicon = require('serve-favicon');
 
 app.createServer(function(request, response){
-   if (request.url === '/favicon.ico') {
+   var urlObj = url.parse(request.url, true);
+
+   if (urlObj.pathname === '/favicon.ico') {
         response.writeHead(200, {'Content-Type': 'image/x-icon'} );
         response.end();
         return;
     };
+
+    console.log(urlObj.pathname);
     
-    var file = (request.url === '/') ? index : path.join(__dirname, request.url);
+    var file = (urlObj.pathname === '/') ? index : path.join('./public', urlObj.pathname);
+
     fs.readFile(file, function(error, html){
         if (error){
             response.writeHeader(500, {"Content-Type": "text/html"});  

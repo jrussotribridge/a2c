@@ -3,39 +3,157 @@
         <title>flickerchat.org</title>
         <style>
             body {
-                font-family: 'Timmana', sans-serif;
+                font-family: 'Oxygen', sans-serif;
+                margin: 0;
+            }
+            .main{
+                height: 100vh;
+                width: 100%;
+            }
+            .main-body {
+                width:100%;
+                height: 100%;
+            }
+            .header{
+                width: 100%;
+                background-color: #85AFC4;
             }
             .header-logo {
                 height: 48px;
                 color: brown;
+                font-size: 32px;
+                padding: 0 0 0 20px;              
+            }
+            .header-logo-text-div {
+                height: 32px;
+                font-family: 'Timmana', sans-serif;
+            }
+            .main-logo {
+                height: 100%;
+                color: brown;
                 font-size: 48px;
                 padding: 0 0 0 20px;
-                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                display: table;
+            }
+            .main-logo-text-div {
+                height: 48px;
+                font-family: 'Timmana', sans-serif;
+            }
+            .table {
+                display: table;
+            }
+            .cell {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .row {
+                display: table-row;
+            }
+            .header-logo-radio {
+                padding: 6px 5px 0 0;
+                color: black;
+                font-size: 26px;
+            }
+            .main-logo-radio {
+                padding: 8px 5px 0 0;
+                color: black;
+                font-size: 38px;
+            }
+            .main-content {
+                height: 100%;
+                max-height: 400px;
+                width: 100%;
+                max-width: 750px;
+                font-size: 24px;
+                font-style: normal;
+                vertical-align: text-top;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .gray-line {
+                height: 1px;
+                width: 100%;
+                max-width: 1600px;
+                border-top: solid 1px #98A9BD;
+            }
+            .align-center{
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .header-button {
+                height: 48px;
+                padding: 7px 20px 0 20px;
+                color: white;
+                vertical-align: middle;
+                font-size: 28px;
             }
         </style>
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
+        <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     </head>
     <body>
-        <div>
-            <div class="header">
-                <div class="header-logo">
-                    <div>
-                        <i class="fa fa-rss" aria-hidden="true"></i> 
+        <div class="main">
+            <div class="header table">
+                <div class="cell">
+                    <div class="header-logo table">
+                        <div class="cell header-logo-radio">
+                            <i class="fa fa-rss" aria-hidden="true"></i> 
+                        </div>
+                        <div class="cell">
+                            <div class="header-logo-text-div">
+                                flickerchat
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                         flickerchat.org
+                </div>
+                <div class="cell">
+                    <div class="header-button align-center" style="float: right;">
+                        integrate
+                    </div>
+                    <div class="header-button align-center" style="float: right;">
+                        demo
+                    </div>
+                    <div class="header-button align-center" style="float: right;">
+                        learn
+                    </div>
+                </div>
+            </div>
+            <div class="main-body table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="main-logo table">
+                            <div class="cell main-logo-radio">
+                                <i class="fa fa-rss" aria-hidden="true"></i> 
+                            </div>
+                            <div class="cell">
+                                <div class="main-logo-text-div">
+                                    flickerchat
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="height: 10px;">
+                    <div class="cell" style="padding: 0 50px;">
+                        <div class="gray-line align-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="table main-content">
+                            flickerchat &reg; is a robust chat engine, modularized and simplified for inclusion in your existing site. 
+                            flickerchat &reg; allows you to chat amongst members of your site freely like other popular chats in the social media sphere. Click here for a <span ng-click="">demo</span> 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!--BEGIN:: comment out these references when deploying to prod-->
-        <script src="/node_modules/angular/angular.min.js"></script>
-        <script src="/node_modules/angular-resource/angular-resource.min.js"></script>
-        <script src="./public/app/app.js"></script>
-        <script src="./public/app/controllers/chatController.js"></script>
-        <!--END:: comment out these references when deploying to prod-->
 
-        <script src="./public/bundles/app.bundle.js"> </script>
+        <script src="./bundles/app.bundle.js"> </script>
     </body>
 </html>
